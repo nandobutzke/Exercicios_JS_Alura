@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>Testando Funções</title>
+
+<head>
+
+  <script>
+
+    function lineNew() {
+      document.write("<br><br>");
+    }
+  
+    function show(text) {
+      document.write(text);
+      lineNew();
+    }
+
+    function calcImc(peso, altura) {
+      
+      var imc = peso / (altura * altura);
+      return imc;
+
+    }
+
+    var nome = prompt("informe o seu nome");
+    var informarAltura = prompt(nome + ", informe sua altura"); //prompt recolhe informações
+    var informarPeso = prompt(nome + ", informe seu peso");
+
+    var imc = calcImc(informarPeso, informarAltura);
+    show("O IMC de " + nome + " é de: " + imc);
+
+  </script>
+
+</head>
+
+</html>

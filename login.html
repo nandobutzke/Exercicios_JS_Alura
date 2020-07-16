@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+
+  <script>
+
+    function lineNew() {
+      document.write("<br><br>");
+    }
+
+    function show(text) {
+      document.write(text);
+      lineNew();
+    }
+
+    var tentativa = 0;
+
+    while (tentativa <= 3) {
+
+      var loginInformado = prompt("Digite um login:");
+      var senhaInformada = prompt("Digite uma senha:");
+
+      if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+        alert("Seja bem-vindo!");
+      } else {
+        alert("acesso negado");
+        tentativa = tentativa + 1;
+      }
+
+      if (tentativa == 3) {
+        alert("O seu número de tentativas esgotou, tente novamente mais tarde.");
+      } else {
+        break;
+      }
+    }
+
+
+  </script>
+</head>
+
+</html>

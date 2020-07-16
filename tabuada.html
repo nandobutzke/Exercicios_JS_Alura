@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tabuada</title>
+
+    <script>
+      
+      function lineNew() {
+        document.write("<br><br>");
+      }
+
+      function show(text) {
+        document.write(text);
+        lineNew();
+      }
+
+      var tabuada = 7;
+
+      for(var vezes = 0; vezes <= 10; vezes++) {
+        var resultado = tabuada * vezes;
+        show(tabuada + " vezes " + vezes + " é igual a " + resultado)
+      }
+
+    </script>
+  </head>
+</html> 

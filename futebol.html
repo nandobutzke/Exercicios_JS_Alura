@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Futebol</title>
+
+  <script>
+    
+    function lineNew() {
+      document.write("<br><br>");
+    }
+
+    function show(text) {
+      document.write(text);
+      lineNew();
+    }
+
+    var vitorias = parseInt(prompt("Digite o número de vitórias:"));
+    var empates = parseInt(prompt("Digite o número de empates:"));
+
+    var pontos = (vitorias * 5) + empates;
+
+    show("O número de pontos conquistados pelo time é de: " + pontos);
+
+    
+
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>isNaN</title>
+
+  <script>
+
+    function lineNew() {
+      document.write("<br><br>");
+    }
+
+    function show(text) {
+      document.write(text);
+      lineNew();
+    }
+
+    var idade = parseInt(prompt("Digite sua idade:"));
+
+    while (isNaN(idade)) {
+      idade = parseInt(prompt("Digite sua idade:"));
+    }
+
+    alert("Você tem " + idade + " anos de idade.");
+
+  </script>
+</head>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ano Copa</title>
+
+    <script>
+
+      function lineNew() {
+        document.write("<br><br>");
+      } 
+
+      function show(text) {
+        document.write(text);
+        lineNew();
+      }
+
+      var anoCopa = 1930;
+
+      var limit = parseInt(prompt("Exponha uma ano limite:"));
+
+      while(anoCopa <= limit) {
+        show("Teve copa no ano de: " + anoCopa);
+        anoCopa = anoCopa + 4;
+      }
+
+      show("FIM");
+
+    </script>
+  </head>
+</html>

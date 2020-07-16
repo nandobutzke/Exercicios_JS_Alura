@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+
+  <script>
+
+    function lineNew() {
+      document.write("<br><br>");
+    }
+
+    function show(text) {
+      document.write(text);
+      lineNew();
+    }
+
+    var totalFamiliares = parseInt(prompt("Informe o número de familiares na sua família:"));
+
+
+    var numero = 1;
+    var totalIdades = 0;          //É melhor sempre declarar a variável fora do comando de repetição. Para não resetar o valor;
+
+    while(numero <= totalFamiliares) {
+      var idade = parseInt(prompt("Informe a idade do familiar:"));
+      totalIdades = totalIdades + idade;
+      numero++;
+    }
+
+    var media = totalIdades / totalFamiliares;
+    show(media);
+
+
+  </script>
+</head>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>30 e 40</title>
+
+    <script>
+
+      function lineNew() {
+        document.write("<br><br>");
+      }
+
+      function show(text) {
+        document.write(text)
+        lineNew();
+      }
+
+      var numero = 30;
+
+      while(numero <= 40) {
+        
+        if (numero == 33) {
+          numero = numero + 1;
+        }
+
+        if(numero == 37) {
+          numero = numero + 1;
+        } else {
+          show(numero);
+          numero = numero + 1;
+        }
+
+      }
+
+    </script>
+
+  </head>
+</html>

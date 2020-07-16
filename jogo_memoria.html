@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Memória</title>
+
+  <script>
+
+    function lineNew() {
+      document.write("<br><br>");
+    }
+
+    function show(text) {
+      document.write(text);
+      lineNew();
+    }
+
+    var randomNumber = Math.round(Math.random() * 10);
+
+    var tentativas = 1;
+
+    while (tentativas <= 3) {
+
+      var chute = parseInt(prompt("Chute um número!"));
+
+      if (chute == randomNumber) {
+        show("Você ACERTOU! O número sorteado era " + randomNumber);
+        break;
+      } else {
+        show("Você ERROU!");
+      }
+      tentativas++;
+    }
+
+    show("FIM");
+
+
+  </script>
+
+</head>
+
+</html>

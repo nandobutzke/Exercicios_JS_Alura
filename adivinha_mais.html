@@ -1,0 +1,102 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Adivinha Mais</title>
+
+  <input/>
+  <button>Compare o meu segredo</button>
+
+  <script>
+
+    function lineNew() {
+      document.write("<br><br>");
+    }
+
+    function show(text) {
+      document.write(text);
+      lineNew();
+    }
+
+    //-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    function draw() {
+      return Math.round(Math.random() * 10);
+    }
+
+    function drawNumbers(amount) {            
+
+      var segredos = [];
+
+      var numero = 1;
+
+      if (randomNumber !== 0) {
+
+        while (numero <= amount) {
+
+          var randomNumber = draw();
+          var find = false;
+
+          for (var posicao = 0; posicao < segredos.length; posicao++) {
+
+            if (segredos[posicao] == randomNumber) {
+              find = true;
+              break;
+            }
+          }
+          
+          if (find == false) {
+            segredos.push(randomNumber);
+            numero++;
+          }
+        }
+          return segredos;                       
+      }
+    }
+
+
+    var segredos = drawNumbers(5);
+
+
+    console.log(segredos);
+
+    //-------------------------------------------------------------------------------------------------------------------------------------
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verify() {
+
+      var find = false;
+
+      for (var posicao = 0; posicao < segredos.length; posicao++) {
+
+        if (input.value == segredos[posicao]) {
+          alert("Você ACERTOU!!");
+          find = true;
+          break;
+        }
+      }
+
+      if (find == false) {
+        alert("Você ERROU!!");
+      }
+
+      input.value = "";
+      input.focus();
+
+    }
+
+
+    var button = document.querySelector("button");
+    button.onclick = verify;                                  
+
+
+
+
+  </script>
+</head>
+
+</html>

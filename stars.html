@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Stars</title>
+
+    <script>
+      function lineNew() {
+        document.write("<br>");
+      }
+
+      function show(text) {
+        document.write(text);
+        lineNew();
+      }
+
+      for(var linha = 1; linha <= 3; linha++) {
+        for(var coluna = 1; coluna <= 10; coluna++) {
+          document.write("*");
+        }
+        lineNew();
+      }
+
+    </script>
+
+  </head>
+</html>
